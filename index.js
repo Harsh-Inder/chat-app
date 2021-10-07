@@ -13,8 +13,6 @@ const users={};
 
 io.on('connection',(socket) => {
 
-    // console.log(`connection established with -->  ${socket.id}`)
-   
     socket.on('send_msg', (data) => {
         io.emit('received_msg',{
             msg: data.msg,
